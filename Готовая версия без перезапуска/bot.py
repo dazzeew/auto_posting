@@ -296,7 +296,6 @@ async def upd_data(message, state: FSMContext):
 					return
 				else:
 					l[int(user_data['count'])*2 - 1] = message.text
-					f = open('text.txt',"w")
 					write_in_txt(l)
 					await bot.send_message(message.chat.id, text = "Запись изменена!")
 					await state.finish()
